@@ -32,6 +32,7 @@ class Settings:
         self.db_host = __settings["DB_HOST"]
         self.db_user = __settings["DB_USER"]
         self.db_password = __settings["DB_PASSWORD"]
+        self.db_name = __settings["DB_NAME"]
         self.aws_user_access_key = __settings["AWS_USER_ACCESS_KEY"]
         self.aws_user_secret_key = __settings["AWS_USER_SECRET_KEY"]
 

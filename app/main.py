@@ -1,6 +1,17 @@
-def main():
-    pass
+import sys
+
+from . import batch
+
+BATCH = {
+    "setup": batch.setup
+}
+
+
+def main(batch_name):
+    job = BATCH[batch_name]
+    job()
 
 
 if __name__ == "__main__":
-    main()
+    assert len(sys.argv) == 2, "number of arguments must be 2"
+    main(sys.argv[1])

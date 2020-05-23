@@ -2,7 +2,7 @@ from ..database import engine
 from .crud_movie import insert
 
 # テーブル削除SQL
-DROP_TABLE_SQL = "DROP IF EXISTS movie"
+DROP_TABLE_SQL = "DROP TABLE IF EXISTS movie"
 
 # テーブル作成SQL
 CREATE_TABLE_SQL = """\
