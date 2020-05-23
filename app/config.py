@@ -27,8 +27,9 @@ class Settings:
         __settings = get_settings(file)
 
         # 初期化
+        self.db_engine = __settings["DB_ENGINE"]
         self.db_port = __settings["DB_PORT"]
-        self.db_endpoint = __settings["DB_ENDPOINT"]
+        self.db_host = __settings["DB_HOST"]
         self.db_user = __settings["DB_USER"]
         self.db_password = __settings["DB_PASSWORD"]
         self.aws_user_access_key = __settings["AWS_USER_ACCESS_KEY"]
