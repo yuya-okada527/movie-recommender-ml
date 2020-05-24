@@ -13,7 +13,7 @@ def create_logger(name):
 
     # 標準出力へのハンドラを設定
     handler = logging.StreamHandler()
-    formatter = logging.Formatter("%(asctime)s:%(name)s:%(levelname)s: %(message)s")
+    formatter = logging.Formatter("%(asctime)s;%(name)s;%(levelname)s; %(message)s")
     handler.setFormatter(formatter)
     log.addHandler(handler)
 
