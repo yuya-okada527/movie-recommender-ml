@@ -48,7 +48,7 @@ def fetch_movies():
 
 
 def make_body():
-    log.info("Makeing file data")
+    log.info("Making file data")
     movies = fetch_movies()
     body = "movie_id\toverview\n"
     for movie in movies:
