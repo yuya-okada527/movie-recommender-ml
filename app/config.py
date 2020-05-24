@@ -36,6 +36,8 @@ class Settings:
         self.aws_user_access_key = __settings["AWS_USER_ACCESS_KEY"]
         self.aws_user_secret_key = __settings["AWS_USER_SECRET_KEY"]
         self.env = __settings["ENV"]
+        self.tmdb_url = __settings["TMDB_URL"]
+        self.tmdb_api_key = __settings["TMDB_API_KEY"]
 
 
 settings = Settings()

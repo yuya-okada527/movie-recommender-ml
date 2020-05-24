@@ -8,7 +8,8 @@ log = create_logger(__name__)
 
 JOBS = {
     "setup": batch.setup,
-    "movie-ids": batch.fetch_all_movie_ids
+    "movie-ids": batch.fetch_all_movie_ids,
+    "overviews": batch.fetch_overviews
 }
 
 
