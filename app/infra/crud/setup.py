@@ -12,6 +12,19 @@ CREATE TABLE IF NOT EXISTS movie(
 )
 """
 
+MOVIES = [
+    "807",   # Se7en
+    "550",   # Fight Club
+    "274",   # The Silence of the Lambs
+    "1893",  # Star Wars Episode 1
+    "1894",  # Star Wars Episode 2
+    "862",   # Toy Story
+    "863",   # Toy Story2
+    "105",   # Back to the Future
+    "12",    # Finding Nemo
+    "128"
+]
+
 
 def create_table():
     with engine.connect() as connection:
@@ -21,6 +34,8 @@ def create_table():
         # テーブルの作成
         connection.execute(CREATE_TABLE_SQL)
 
-        # サンプルデータの作成
-        for i in range(10):
-            make_movie(f"{i}", f"{i}")
+
+def create_data():
+    # サンプルデータの作成
+    for i in range(10):
+        make_movie(f"{i}", f"{MOVIES[i]}")
