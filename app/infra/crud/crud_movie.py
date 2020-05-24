@@ -1,7 +1,7 @@
 from ..database import engine
 
 # データ挿入
-INSERT_MOVIE_SQL = "INSERT INTO movie VALUES (?, ?)"
+INSERT_MOVIE_SQL = "INSERT INTO movie VALUES (%s, %s)"
 
 
 def insert(movie_id, tmdb_id):
