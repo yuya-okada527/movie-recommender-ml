@@ -1,5 +1,5 @@
 from ..database import engine
-from .crud_movie import insert
+from .crud_movie import make_movie
 
 # テーブル削除SQL
 DROP_TABLE_SQL = "DROP TABLE IF EXISTS movie"
@@ -23,4 +23,4 @@ def create_table():
 
         # サンプルデータの作成
         for i in range(10):
-            insert(f"{i}", f"{i}")
+            make_movie(f"{i}", f"{i}")
