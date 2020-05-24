@@ -12,7 +12,7 @@ def get_session():
 
 def get_bucket(name=settings.bucket_name):
     session = get_session()
-    return session.resource("s3").Bucjet(name)
+    return session.resource("s3").Bucket(name)
 
 
 def put_object(key, body):
