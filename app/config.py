@@ -38,6 +38,7 @@ class Settings:
         self.env = __settings["ENV"]
         self.tmdb_url = __settings["TMDB_URL"]
         self.tmdb_api_key = __settings["TMDB_API_KEY"]
+        self.bucket_name = __settings["BUCKET_NAME"]
 
 
 settings = Settings()

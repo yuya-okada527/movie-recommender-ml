@@ -27,7 +27,8 @@ def fetch_overviews():
     movie_ids = fetch_all_movie_ids()
     base_url = settings.tmdb_url
     params = {
-        "api_key": settings.tmdb_api_key
+        "api_key": settings.tmdb_api_key,
+        "lang": "ja"
     }
 
     for movie_id in movie_ids:
