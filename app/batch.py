@@ -41,7 +41,8 @@ def fetch_movies():
         movies.append(Movie(
             movie_id=movie_id,
             tmdb_id=tmdb_id,
-            overview=movie["overview"]
+            overview=movie["overview"],
+            title=movie["original_title"]
         ))
     log.info("Data Fetched")
     return movies
@@ -50,10 +51,10 @@ def fetch_movies():
 def make_body():
     log.info("Making file data")
     movies = fetch_movies()
-    body = "movie_id\toverview\n"
+    body = "movie_id\ttitle\toverview\n"
     for movie in movies:
         overview = movie.overview.replace("\t", "")[:512]
-        body += "\t".join([movie.movie_id, overview]) + "\n"
+        body += "\t".join([movie.movie_id, movie.title, overview]) + "\n"
     log.info("File data Made")
     return body
 
