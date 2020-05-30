@@ -1,3 +1,5 @@
+import os
+
 ENV_FILE = ".env"
 
 
@@ -24,21 +26,21 @@ class Settings:
 
     def __init__(self, file=ENV_FILE):
         # 設定の取得
-        __settings = get_settings(file)
+        # __settings = get_settings(file)
 
         # 初期化
-        self.db_engine = __settings["DB_ENGINE"]
-        self.db_port = __settings["DB_PORT"]
-        self.db_host = __settings["DB_HOST"]
-        self.db_user = __settings["DB_USER"]
-        self.db_password = __settings["DB_PASSWORD"]
-        self.db_name = __settings["DB_NAME"]
-        self.aws_user_access_key = __settings["AWS_USER_ACCESS_KEY"]
-        self.aws_user_secret_key = __settings["AWS_USER_SECRET_KEY"]
-        self.env = __settings["ENV"]
-        self.tmdb_url = __settings["TMDB_URL"]
-        self.tmdb_api_key = __settings["TMDB_API_KEY"]
-        self.bucket_name = __settings["BUCKET_NAME"]
+        self.db_engine = os.getenv("DB_ENGINE")
+        self.db_port = os.getenv("DB_PORT")
+        self.db_host = os.getenv("DB_HOST")
+        self.db_user = os.getenv("DB_USER")
+        self.db_password = os.getenv("DB_PASSWORD")
+        self.db_name = os.getenv("DB_NAME")
+        self.aws_user_access_key = os.getenv("AWS_USER_ACCESS_KEY")
+        self.aws_user_secret_key = os.getenv("AWS_USER_SECRET_KEY")
+        self.env = os.getenv("ENV")
+        self.tmdb_url = os.getenv("")
+        self.tmdb_api_key = os.getenv("TMDB_API_KEY")
+        self.bucket_name = os.getenv("BUCKET_NAME")
 
 
 settings = Settings()
