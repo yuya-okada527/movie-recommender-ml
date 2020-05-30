@@ -4,11 +4,9 @@ RUN mkdir /app \
  && cd app
 COPY requirements.txt /app
 
-WORKDIR /app
-
 RUN pip install -U pip \
- && pip install -r requirements.txt
+ && pip install -r /app/requirements.txt
 
 COPY ./app /app
 
-ENTRYPOINT ["python", "-m", "app.main", "upload"]
+ENTRYPOINT ["python", "-m","app.main", "upload"]

@@ -14,9 +14,9 @@ $ python -m app.main
 
 ```bash
 # コンテナのビルド
-$ docker build -t movie-recommender/ml-batch .
+$ docker build -t movie-recommender/ml-batch:0.0.1 .
 
 # コンテナの起動
-$ docker run --rm --name ml-batch movie-recommender/ml-batch
+$ docker run --rm --env-file .env --name ml-batch movie-recommender/ml-batch:0.0.1 
 
 ```
