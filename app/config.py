@@ -38,7 +38,7 @@ class Settings:
         self.aws_user_access_key = os.getenv("AWS_USER_ACCESS_KEY")
         self.aws_user_secret_key = os.getenv("AWS_USER_SECRET_KEY")
         self.env = os.getenv("ENV")
-        self.tmdb_url = os.getenv("")
+        self.tmdb_url = os.getenv("TMDB_URL")
         self.tmdb_api_key = os.getenv("TMDB_API_KEY")
         self.bucket_name = os.getenv("BUCKET_NAME")
 
