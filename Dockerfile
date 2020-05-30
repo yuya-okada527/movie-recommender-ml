@@ -4,8 +4,10 @@ RUN mkdir /app \
  && cd app
 COPY requirements.txt /app
 
+WORKDIR /app
+
 RUN pip install -U pip \
- && pip install -r /requirements.txt
+ && pip install -r requirements.txt
 
 COPY ./app /app
 
